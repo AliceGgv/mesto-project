@@ -1,5 +1,5 @@
 .elements__button {
-  background: url("/images/heart.svg") no-repeat 50%/100%;
+  background: url("../../../images/heart.svg") no-repeat 50%/100%;
   width: 22px;
   height: 19px;
   border: none;

@@ -3,7 +3,7 @@
   height: 24px;
   border: 1px solid #ffffff;
   box-sizing: border-box;
-  background: url("/images/vector-change.svg") no-repeat 50%/ 10px 10px;
+  background: url("../../../images/vector-change.svg") no-repeat 50%/ 10px 10px;
 }
 
 @media (max-width: 930px) {

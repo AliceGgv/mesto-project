@@ -3,7 +3,7 @@
   height: 50px;
   border-radius: 2px;
   border: 2px solid #fff;
-  background: url("/images/vector.svg") no-repeat 50%/ 22px 22px;
+  background: url("../../../images/vector.svg") no-repeat 50%/ 22px 22px;
   align-self: center;
   box-sizing: border-box;
 }
