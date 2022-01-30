@@ -1,0 +1,12 @@
+.elements__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 25px 21px 31px 21px;
+}
+
+@media (max-width: 645px) {
+  .elements__info {
+    padding-top: 21px;
+  }
+}

@@ -1,0 +1,23 @@
+.profile__add-button {
+  width: 150px;
+  height: 50px;
+  border-radius: 2px;
+  border: 2px solid #fff;
+  background: url("/images/vector.svg") no-repeat 50%/ 22px 22px;
+  align-self: center;
+  box-sizing: border-box;
+}
+
+@media (max-width: 930px) {
+  .profile__add-button {
+    width: 581px;
+    margin-top: 31px;
+  }
+}
+
+@media (max-width: 645px) {
+  .profile__add-button {
+    width: 282px;
+    background-size: 16px 16px;
+  }
+}
