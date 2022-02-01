@@ -1,6 +1,6 @@
 .content-hover {
   opacity: 1;
-  transition: 3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .content-hover:hover {

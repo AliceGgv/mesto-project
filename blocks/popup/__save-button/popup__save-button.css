@@ -10,7 +10,7 @@
   font-size: 18px;
   line-height: 22px;
   text-align: center;
-  transition: 3s ease-out;
+  transition: 0.3s ease-out;
 }
 
 .popup__save-button:hover {
