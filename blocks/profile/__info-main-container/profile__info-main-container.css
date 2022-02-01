@@ -4,3 +4,9 @@
   justify-content: center;
   padding-left: 30px;
 }
+
+@media (max-width: 930px) {
+  .profile__info-main-container {
+    padding-left: 0px;
+  }
+}

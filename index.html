@@ -13,10 +13,9 @@
     <header class="header">
       <img class="header__logo" src="images/logo.svg" alt="Лого" />
     </header>
-    <main>
+    <main class="content">
       <section class="popup">
-        <div class="popup__overlay popup_opened"></div>
-        <form class="popup__container">
+        <form class="popup__container" name="edit">
           <h2 class="popup__title">Редактировать профиль</h2>
           <input
             type="text"
@@ -30,10 +29,11 @@
             name="occupation"
             value="Исследователь океана"
           />
-          <button class="popup__save-button popup__save-button_hover">
-            Сохранить
-          </button>
-          <button class="popup__exit-button content-hover"></button>
+          <button type="submit" class="popup__save-button">Сохранить</button>
+          <button
+            type="button"
+            class="popup__exit-button content-hover"
+          ></button>
         </form>
       </section>
       <section class="profile">
@@ -42,77 +42,103 @@
           <div class="profile__info-main-container">
             <div class="profile__info-container">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
-              <button class="profile__edit-button content-hover"></button>
+              <button
+                type="button"
+                class="profile__edit-button content-hover"
+              ></button>
             </div>
             <p class="profile__subtitle">Исследователь океана</p>
           </div>
         </div>
-        <button class="profile__add-button content-hover"></button>
+        <button
+          type="button"
+          class="profile__add-button content-hover"
+        ></button>
       </section>
       <section class="elements">
-        <div class="elements__item">
-          <img
-            class="elements__img"
-            src="images/karachaevsk.jpg"
-            alt="Карачаевск"
-          />
-          <div class="elements__info">
-            <h2 class="elements__title">Карачаевск</h2>
-            <button class="elements__button content-hover"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img
-            class="elements__img"
-            src="images/elbrus.jpg"
-            alt="Гора Эльбрус"
-          />
-          <div class="elements__info">
-            <h2 class="elements__title">Гора Эльбрус</h2>
-            <button class="elements__button content-hover"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img class="elements__img" src="images/dombay.jpg" alt="Домбай" />
-          <div class="elements__info">
-            <h2 class="elements__title">Домбай</h2>
+        <ul class="elements__list">
+          <li class="elements__item">
+            <img
+              class="elements__img"
+              src="images/karachaevsk.jpg"
+              alt="Карачаевск"
+            />
+            <div class="elements__info">
+              <h2 class="elements__title">Карачаевск</h2>
+              <button
+                type="button"
+                class="elements__button content-hover"
+              ></button>
+            </div>
+          </li>
+          <li class="elements__item">
+            <img
+              class="elements__img"
+              src="images/elbrus.jpg"
+              alt="Гора Эльбрус"
+            />
+            <div class="elements__info">
+              <h2 class="elements__title">Гора Эльбрус</h2>
+              <button
+                type="button"
+                class="elements__button content-hover"
+              ></button>
+            </div>
+          </li>
+          <li class="elements__item">
+            <img class="elements__img" src="images/dombay.jpg" alt="Домбай" />
+            <div class="elements__info">
+              <h2 class="elements__title">Домбай</h2>
 
-            <button class="elements__button content-hover"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img
-            class="elements__img"
-            src="images/st-petersburg.jpg"
-            alt="Санкт Петербург"
-          />
-          <div class="elements__info">
-            <h2 class="elements__title">Санкт Петербург</h2>
-            <button class="elements__button content-hover"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img
-            class="elements__img"
-            src="images/gorniy-altai.jpg"
-            alt="Горный Алтай"
-          />
-          <div class="elements__info">
-            <h2 class="elements__title">Горный Алтай</h2>
-            <button class="elements__button content-hover"></button>
-          </div>
-        </div>
-        <div class="elements__item">
-          <img class="elements__img" src="images/sochi.jpg" alt="Сочи" />
-          <div class="elements__info">
-            <h2 class="elements__title">Сочи</h2>
-            <button class="elements__button content-hover"></button>
-          </div>
-        </div>
+              <button
+                type="button"
+                class="elements__button content-hover"
+              ></button>
+            </div>
+          </li>
+          <li class="elements__item">
+            <img
+              class="elements__img"
+              src="images/st-petersburg.jpg"
+              alt="Санкт Петербург"
+            />
+            <div class="elements__info">
+              <h2 class="elements__title">Санкт Петербург</h2>
+              <button
+                type="button"
+                class="elements__button content-hover"
+              ></button>
+            </div>
+          </li>
+          <li class="elements__item">
+            <img
+              class="elements__img"
+              src="images/gorniy-altai.jpg"
+              alt="Горный Алтай"
+            />
+            <div class="elements__info">
+              <h2 class="elements__title">Горный Алтай</h2>
+              <button
+                type="button"
+                class="elements__button content-hover"
+              ></button>
+            </div>
+          </li>
+          <li class="elements__item">
+            <img class="elements__img" src="images/sochi.jpg" alt="Сочи" />
+            <div class="elements__info">
+              <h2 class="elements__title">Сочи</h2>
+              <button
+                type="button"
+                class="elements__button content-hover"
+              ></button>
+            </div>
+          </li>
+        </ul>
       </section>
     </main>
     <footer class="footer">
-      <h3 class="footer__copyright">© 2022 Mesto Russia</h3>
+      <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
   </body>
 </html>

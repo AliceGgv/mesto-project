@@ -3,7 +3,6 @@
   color: #000;
   position: relative;
   max-width: 430px;
-  max-height: 330px;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   display: flex;
@@ -13,6 +12,5 @@
 @media (max-width: 645px) {
   .popup__container {
     max-width: 282px;
-    max-height: 322px;
   }
 }

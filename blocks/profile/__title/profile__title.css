@@ -6,6 +6,10 @@
   padding-right: 18px;
   margin: 0;
   letter-spacing: 0.5px;
+  max-width: 294px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 
 @media (max-width: 930px) {
@@ -13,7 +17,7 @@
     font-size: 35px;
     line-height: 41px;
     padding-right: 14px;
-    margin-top: 22.25px;
+    margin-top: 27.25px;
   }
 }
 

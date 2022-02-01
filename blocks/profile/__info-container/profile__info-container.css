@@ -3,3 +3,9 @@
   flex-direction: row;
   align-items: baseline;
 }
+
+@media (max-width: 930px) {
+  .profile__info-container {
+    padding-left: 31px;
+  }
+}
