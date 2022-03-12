@@ -1,0 +1,4 @@
+.popup__full-foto__container {
+  z-index: 10;
+  position: relative;
+}
