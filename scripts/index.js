@@ -1,44 +1,31 @@
 // const
-const openEditButton = document.querySelector(".profile__edit-button");
-const closeEditButton = document.querySelector(".popup__exit-button");
-const popup = document.querySelector(".popup");
+const buttonEditProfile = document.querySelector(".profile__edit-button");
+const buttonEditCloseProfile = document.querySelector(".popup__exit-button");
+const popupUserInfo = document.querySelector(".popup__type_userinfo");
 
-const openAddButton = document.querySelector(".profile__add-button");
-const closeAddButton = document.querySelector(".popup_add__exit-button ");
-const popupAdd = document.querySelector(".popup_add");
+const buttonAddProfile = document.querySelector(".profile__add-button");
+const buttonAddCloseProfile = document.querySelector(
+  ".popup__type_add-place_exit-button"
+);
+const popupAdd = document.querySelector(".popup__type_add-place");
 
 const formElement = document.querySelector(".popup__container");
-const nameInput = document.querySelector(".popup__input-name");
-const jobInput = document.querySelector(".popup__input-job");
+const nameInput = document.querySelector(".popup__input_name");
+const jobInput = document.querySelector(".popup__input_job");
 const profileTitle = document.querySelector(".profile__title");
 const profileSubtitle = document.querySelector(".profile__subtitle");
 
-const initialCards = [
-  {
-    name: "Сочи",
-    link: "images/sochi.jpg",
-  },
-  {
-    name: "Горный Алтай",
-    link: "images/gorniy-altai.jpg",
-  },
-  {
-    name: "Санкт Петербург",
-    link: "images/st-petersburg.jpg",
-  },
-  {
-    name: "Домбай",
-    link: "images/dombay.jpg",
-  },
-  {
-    name: "Гора Эльбрус",
-    link: "images/elbrus.jpg",
-  },
-  {
-    name: "Карачаевск",
-    link: "images/karachaevsk.jpg",
-  },
-];
+const ul = document.querySelector(".elements__list");
+const template = document.querySelector(".elements-template").content;
+
+const fullFoto = document.querySelector(".popup__type_full-foto");
+const fullFotoExit = document.querySelector(
+  ".popup__type_full-foto__exit-button"
+);
+
+const pictureEl = document.querySelector(".popup__type_add-place__container");
+const namePictureImput = document.querySelector(".popup__input_place-name");
+const linkInput = document.querySelector(".popup__input_link");
 
 // открывание/закрывание попапов
 
@@ -50,20 +37,24 @@ function closePopup(popupElement) {
   popupElement.classList.remove("popup_opened");
 }
 
-openEditButton.addEventListener("click", function () {
-  openPopup(popup);
+buttonEditProfile.addEventListener("click", function () {
+  openPopup(popupUserInfo);
 });
 
-closeEditButton.addEventListener("click", function () {
-  closePopup(popup);
+buttonEditCloseProfile.addEventListener("click", function () {
+  closePopup(popupUserInfo);
 });
 
-openAddButton.addEventListener("click", function () {
+buttonAddProfile.addEventListener("click", function () {
   openPopup(popupAdd);
 });
 
-closeAddButton.addEventListener("click", function () {
+buttonAddCloseProfile.addEventListener("click", function () {
   closePopup(popupAdd);
+});
+
+fullFotoExit.addEventListener("click", function () {
+  closePopup(fullFoto);
 });
 
 // редактирование информации профиля
@@ -73,15 +64,12 @@ function formSubmitHandler(evt) {
 
   profileTitle.textContent = nameInput.value;
   profileSubtitle.textContent = jobInput.value;
-  closePopup(popup);
+  closePopup(popupUserInfo);
 }
 
 formElement.addEventListener("submit", formSubmitHandler);
 
 //template
-const ul = document.querySelector(".elements__list");
-const template = document.querySelector(".elements-template").content;
-
 function addElement(element, elementHolder) {
   elementHolder.prepend(element);
 }
@@ -94,16 +82,17 @@ function createElement(elementName, elementUrl) {
   element.querySelector(".elements__title").textContent = elementName;
 
   const likeButton = element.querySelector(".elements__button");
+  const deleteButton = element.querySelector(".elements__button-delete");
+  const image = element.querySelector(".elements__img");
+
   likeButton.addEventListener("click", function () {
     likeButton.classList.toggle("elements__button_active");
   });
 
-  const deleteButton = element.querySelector(".elements__button-delete");
   deleteButton.addEventListener("click", function () {
     deleteButton.closest(".elements__item").remove();
   });
 
-  const image = element.querySelector(".elements__img");
   image.addEventListener("click", function () {
     openPopup(fullFoto);
     fullFoto.querySelector(".popup__img").src = image.src;
@@ -119,18 +108,7 @@ initialCards.forEach((item) => {
   addElement(card, ul);
 });
 
-// photo popup
-const fullFoto = document.querySelector(".popup__full-foto");
-const fullFotoExit = document.querySelector(".popup__full-foto__exit-button");
-
-fullFotoExit.addEventListener("click", function () {
-  closePopup(fullFoto);
-});
-
 // add new picture
-const pictureEl = document.querySelector(".popup__container_add");
-const namePictureImput = document.querySelector(".popup__name");
-const linkInput = document.querySelector(".popup__link");
 
 function addPicture(evt) {
   evt.preventDefault();

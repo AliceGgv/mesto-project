@@ -14,18 +14,18 @@
       <img class="header__logo" src="images/logo.svg" alt="Лого" />
     </header>
     <main class="content">
-      <section class="popup">
+      <section class="popup popup__type_userinfo">
         <form class="popup__container" name="edit">
           <h2 class="popup__title">Редактировать профиль</h2>
           <input
             type="text"
-            class="popup__input popup__input-name"
+            class="popup__input popup__input_name"
             name="username"
             value="Жак-Ив Кусто"
           />
           <input
             type="text"
-            class="popup__input popup__input-job"
+            class="popup__input popup__input_job"
             name="occupation"
             value="Исследователь океана"
           />
@@ -37,34 +37,37 @@
         </form>
       </section>
 
-      <section class="popup popup_add">
-        <form class="popup__container popup__container_add" name="add">
+      <section class="popup popup__type_add-place">
+        <form
+          class="popup__container popup__type_add-place__container"
+          name="add"
+        >
           <h2 class="popup__title">Новое место</h2>
           <input
             type="text"
-            class="popup__input popup__name"
+            class="popup__input popup__input_place-name"
             name="placename"
             placeholder="Название"
           />
           <input
             type="url"
-            class="popup__input popup__link"
+            class="popup__input popup__input_link"
             name="link"
             placeholder="Ссылка на картинку"
           />
           <button type="submit" class="popup__save-button">Создать</button>
           <button
             type="button"
-            class="popup__exit-button popup_add__exit-button content-hover"
+            class="popup__exit-button popup__type_add-place_exit-button content-hover"
           ></button>
         </form>
       </section>
 
-      <section class="popup popup__full-foto">
+      <section class="popup popup__type_full-foto">
         <div class="popup__full-foto__container">
           <button
             type="button"
-            class="popup__full-foto__exit-button content-hover"
+            class="popup__type_full-foto__exit-button content-hover"
           ></button>
           <img class="popup__img" src="" alt="" />
           <h2 class="popup__heading"></h2>
@@ -113,6 +116,7 @@
     <footer class="footer">
       <p class="footer__copyright">© 2022 Mesto Russia</p>
     </footer>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="scripts/cards.js"></script>
+    <script type="text/javascript" src="scripts/index.js"></script>
   </body>
 </html>
